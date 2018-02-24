@@ -104,6 +104,20 @@ content .navigation .card {
   width: 250px;
   height: 215px;
 }
+content .navigation .card img:hover {
+  animation: rotY 1s linear infinite;
+}
+@keyframes rotY {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
 content .navigation .card h4 {
   color: #4e4e4e;
   font-family: Roboto Slab;
