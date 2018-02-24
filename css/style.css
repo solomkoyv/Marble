@@ -42,3 +42,44 @@ header .links a {
 header .links a:hover {
   color: #1abb9c;
 }
+.baner {
+  background: url(../img/banner.jpg) no-repeat;
+  min-height: 600px;
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.baner h1 {
+  color: #f3f3f3;
+  font-family: Roboto Slab;
+  font-size: 40px;
+  margin: 2%;
+}
+.baner h2 {
+  color: #a8a8a8;
+  font-family: Roboto Slab;
+  font-size: 32px;
+  margin: 1%;
+}
+.baner a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: Roboto Condensed;
+  font-size: 14px;
+  line-height: 43px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 140px;
+  height: 45px;
+  box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.15);
+  background-color: #3f8dbf;
+  border-radius: 3px;
+  margin: 2%;
+  transition: all 0.2s;
+}
+.baner a:hover {
+  background-color: #33749E;
+}
