@@ -57,12 +57,14 @@ header .links a:hover {
   font-family: Roboto Slab;
   font-size: 40px;
   margin: 2%;
+  text-align: center;
 }
 .baner h2 {
   color: #a8a8a8;
   font-family: Roboto Slab;
   font-size: 32px;
   margin: 1%;
+  text-align: center;
 }
 .baner a {
   text-decoration: none;
@@ -92,19 +94,26 @@ content {
 content .navigation {
   margin-top: 4%;
   width: 80%;
-  height: 277px;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-content .navigation .card {
+content .navigation .wrap_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+content .navigation .wrap_card .card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
   width: 250px;
   height: 215px;
+  margin-bottom: 5%;
 }
-content .navigation .card img:hover {
+content .navigation .wrap_card .card img:hover {
   animation: rotY 1s linear infinite;
 }
 @keyframes rotY {
@@ -118,13 +127,13 @@ content .navigation .card img:hover {
     transform: rotateY(360deg);
   }
 }
-content .navigation .card h4 {
+content .navigation .wrap_card .card h4 {
   color: #4e4e4e;
   font-family: Roboto Slab;
   font-size: 18px;
   font-weight: 700;
 }
-content .navigation .card p {
+content .navigation .wrap_card .card p {
   width: 233px;
   height: 63px;
   color: #616161;
@@ -135,16 +144,19 @@ content .navigation .card p {
   text-align: center;
 }
 content hr {
-  width: 1170px;
+  width: 80%;
+  max-width: 1200px;
   height: 2px;
   background-color: #000000;
   opacity: 0.11;
   margin: 1% 0 4% 0;
 }
 content .works {
+  width: 80%;
   display: flex;
-  justify-content: center;
-  max-width: 1173px;
+  justify-content: space-between;
+  max-width: 1200px;
+  flex-wrap: wrap;
 }
 content .works .card_works {
   display: flex;
@@ -152,7 +164,6 @@ content .works .card_works {
   justify-content: space-between;
   max-width: 380px;
   height: 450px;
-  margin-right: 2%;
 }
 content .works .card_works h3 {
   width: 150px;
@@ -211,7 +222,7 @@ content .end_content img {
   margin-top: 2%;
 }
 content .end_content p {
-  width: 740px;
+  max-width: 740px;
   height: 51px;
   color: #a1a1a1;
   font-family: Roboto Slab;
@@ -219,7 +230,7 @@ content .end_content p {
   font-weight: 400;
   line-height: 30px;
   text-align: center;
-  margin-bottom: 2%;
+  margin-bottom: 3%;
 }
 footer {
   background: url(../img/footer-bg.jpg);
@@ -233,8 +244,10 @@ footer .wrap_info {
 footer .wrap_info .info {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 footer .wrap_info .info .info_card {
+  width: 250px;
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -254,7 +267,7 @@ footer .wrap_info .info .info_card p {
   line-height: 24px;
 }
 footer .wrap_info hr {
-  width: 1170px;
+  width: 100%;
   height: 2px;
   background-color: #ffffff;
   opacity: 0.11;
@@ -266,4 +279,19 @@ footer .wrap_info p {
   color: #cacaca;
   font-family: Roboto;
   font-size: 14px;
+}
+@media screen and (max-width: 1440px) {
+  content .works {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 1440px) {
+  content .works .card_works {
+    margin-right: 5%;
+  }
+}
+@media screen and (max-width: 960px) {
+  content .works .card_works {
+    margin-right: 0;
+  }
 }
