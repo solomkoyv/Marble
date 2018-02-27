@@ -23,22 +23,64 @@ header .logo a {
   text-transform: uppercase;
   letter-spacing: -2px;
 }
-header .links #touch-menu {
+header .links .checkbox_touch-menu {
   display: none;
 }
-header .links img {
-  border-radius: 2px;
-}
-header .links a:hover img {
+header .links:hover img {
   transition: all 0.1s linear 0.1s;
-  transform: scale(1.1) translate3d(0, 3px, 0);
-  box-shadow: -6px 6px 5px 0 rgba(0, 0, 0, 0.8);
+  transform: scale(1.1) translate3d(-3px, 3px, 0);
+  cursor: pointer;
 }
-header .links nav .nav {
+header .links .bg_button_touch-menu {
+  position: relative;
+  display: none;
+  width: 40px;
+  height: 40px;
+  background: #000;
+  opacity: 0.5;
+  border-radius: 5px;
+}
+header .links .bg_button_touch-menu .button_touch-menu {
+  position: relative;
+  left: 20%;
+  top: 20%;
+  border-radius: 2px;
+  display: blockS;
+}
+header .links .nav_burger {
+  position: relative;
+  display: none;
+}
+header .links .nav_burger .nav_b {
+  display: block;
+  position: absolute;
+  right: 0;
+  list-style: none;
+  width: 100px;
+  height: 190px;
+  background: #000;
+  opacity: 0.5;
+  border-radius: 5px;
+  text-align: end;
+  margin-top: 10px;
+}
+header .links .nav_burger .nav_b li a {
+  display: block;
+  text-decoration: none;
+  margin-right: 15px;
+  color: #FFF;
+  font-family: Roboto Condensed;
+  font-size: 18px;
+  padding: 5px;
+}
+header .links .nav_burger .nav_b li a:hover {
+  color: #1abb9c;
+}
+header .links .nav_full .nav_f {
   display: flex;
   list-style: none;
 }
-header .links nav .nav li a {
+header .links .nav_full .nav_f li a {
   text-decoration: none;
   width: 429px;
   height: 13px;
@@ -51,7 +93,7 @@ header .links nav .nav li a {
   margin-left: 20px;
   transition: all 0.2s;
 }
-header .links nav .nav li a:hover {
+header .links .nav_full .nav_f li a:hover {
   color: #1abb9c;
 }
 .baner {
@@ -308,10 +350,13 @@ footer .wrap_info p {
   }
 }
 @media screen and (max-width: 768px) {
-  nav {
+  .nav_full {
     display: none;
   }
-  header .logo_line .links #touch-menu {
+  header .logo_line .links .bg_button_touch-menu {
+    display: block;
+  }
+  header .logo_line .links .checkbox_touch-menu:checked ~ .nav_burger {
     display: block;
   }
 }
