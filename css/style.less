@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Slab');
 header{
   .logo_line{
-    max-width: 1169px;
+    max-width: 80%;
     height: 125px;
     display: flex;
     margin: 0 auto;
@@ -27,21 +27,35 @@ header{
     }
   }
   .links{
-    display: flex;
-    a{
-      text-decoration: none;
-      width: 429px;
-      height: 13px;
-      color: #4e4e4e;
-      font-family: Roboto Condensed;
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 35px;
-      text-transform: uppercase;
-      margin-left: 20px;
-      transition: all 0.2s;
-      &:hover{
-        color: #1abb9c;
+    #touch-menu{display: none;}
+    img{border-radius: 2px;}
+    a:hover img{
+      transition: all 0.1s linear 0.1s;
+      transform: scale(1.1) translate3d(0, 3px, 0);
+      box-shadow: -6px 6px 5px 0 rgba(0, 0, 0, .8);
+    }
+    nav{
+      .nav{
+        display: flex;
+        list-style: none;
+        li{
+          a{
+            text-decoration: none;
+            width: 429px;
+            height: 13px;
+            color: #4e4e4e;
+            font-family: Roboto Condensed;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 35px;
+            text-transform: uppercase;
+            margin-left: 20px;
+            transition: all 0.2s;
+            &:hover{
+              color: #1abb9c;
+            }
+          }
+        }
       }
     }
   }
@@ -293,12 +307,16 @@ footer{
   }
 }
 @media screen and(max-width: 1440px){
-    content .works .card_works{
+  content .works .card_works{
     margin-right: 5%;
   }
 }
 @media screen and(max-width: 960px){
-    content .works .card_works{
+  content .works .card_works{
     margin-right: 0;
   }
+}
+@media screen and(max-width: 768px){
+  nav{display: none;}
+  header .logo_line .links #touch-menu{display: block;}
 }

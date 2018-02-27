@@ -4,7 +4,7 @@
   padding: 0;
 }
 header .logo_line {
-  max-width: 1169px;
+  max-width: 80%;
   height: 125px;
   display: flex;
   margin: 0 auto;
@@ -23,10 +23,22 @@ header .logo a {
   text-transform: uppercase;
   letter-spacing: -2px;
 }
-header .links {
-  display: flex;
+header .links #touch-menu {
+  display: none;
 }
-header .links a {
+header .links img {
+  border-radius: 2px;
+}
+header .links a:hover img {
+  transition: all 0.1s linear 0.1s;
+  transform: scale(1.1) translate3d(0, 3px, 0);
+  box-shadow: -6px 6px 5px 0 rgba(0, 0, 0, 0.8);
+}
+header .links nav .nav {
+  display: flex;
+  list-style: none;
+}
+header .links nav .nav li a {
   text-decoration: none;
   width: 429px;
   height: 13px;
@@ -39,7 +51,7 @@ header .links a {
   margin-left: 20px;
   transition: all 0.2s;
 }
-header .links a:hover {
+header .links nav .nav li a:hover {
   color: #1abb9c;
 }
 .baner {
@@ -293,5 +305,13 @@ footer .wrap_info p {
 @media screen and (max-width: 960px) {
   content .works .card_works {
     margin-right: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  header .logo_line .links #touch-menu {
+    display: block;
   }
 }
